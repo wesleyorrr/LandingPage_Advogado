@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advogado - Landing Page</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <img src="https://via.placeholder.com/100x100?text=Logo" alt="Logo" class="logo" />
+      <div class="nav-links">
+    
+        <a href="#">Home</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+    <div class="header-content">
+      <h1>Proteja seus direitos com quem entende da lei</h1>
+      <button onclick="scrollToContato()">Fale Conosco</button>
+    </div>
+  </header>
+
+  <section id="sobre" class="container">
+    <img src="assets/img/imgid.png" alt="Foto do Advogado" class="img-sobre" />
+    <div>
+      <h2>Sobre o Advogado</h2>
+      <p>Especialista em Direito Civil, com vasta experiência na defesa de seus clientes.</p>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <button onclick="scrollToContato()">Entrar em contato</button>
+    </div>
+  </section>
+
+  <section id="servicos" class="container">
+    <h2>Serviços e Especialidades</h2>
+    <div class="carousel">
+      <div class="carousel-item"><h3>Direito Civil</h3><p>Atuação em causas civis, indenizações, contratos e mais.</p></div>
+      <div class="carousel-item"><h3>Direito Trabalhista</h3><p>Defesa de direitos do trabalhador e empregador.</p></div>
+      <div class="carousel-item"><h3>Direito de Família</h3><p>Casamento, divórcio, guarda e pensão alimentícia.</p></div>
+      <div class="carousel-item"><h3>Direito Penal</h3><p>Atuação em defesa criminal, processos penais.</p></div>
+      <div class="carousel-item"><h3>Direito do Consumidor</h3><p>Defesa dos direitos do consumidor em todas as esferas.</p></div>
+    </div>
+  </section>
+
+  <section id="depoimentos" class="container">
+    <h2>Depoimentos</h2>
+    <div class="depoimentos">
+      <div>“Excelente atendimento e resultado incrível!” – João M.</div>
+      <div>“Muito profissional, recomendo.” – Ana C.</div>
+      <div>“Resolveu meu problema rapidamente.” – Carla T.</div>
+      <div>“Atendimento diferenciado e personalizado.” – Marcos B.</div>
+      <div>“Superou minhas expectativas.” – Fernanda G.</div>
+      <div>“Confiável e eficiente.” – Pedro L.</div>
+      <div>“O melhor advogado da região.” – Helena R.</div>
+      <div>“Indico de olhos fechados.” – Diego S.</div>
+      <div>“Competência e dedicação.” – Beatriz M.</div>
+      <div>“Excelente profissional.” – Luiz A.</div>
+    </div>
+  </section>
+
+  <section id="contato" class="container">
+    <h2>Fale Conosco</h2>
+    <form id="formContato">
+      <input type="text" placeholder="Nome" required />
+      <input type="tel" placeholder="Telefone" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Assunto" required />
+      <textarea placeholder="Mensagem" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
