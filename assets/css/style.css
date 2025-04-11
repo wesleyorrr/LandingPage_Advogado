@@ -50,7 +50,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #f5f4f2;
+  color: #791c1c;
 }
 
 .logo {
@@ -80,8 +80,8 @@ nav {
   padding: 1rem 2rem;
   font-size: 1.2rem;
   border: none;
-  background: #f7f7f6;
-  color: #101010;
+  background: #791c1c;
+  color: white;
   font-family: poppins, sans-serif;
   cursor: pointer;
   border-radius: 8px;
@@ -133,6 +133,13 @@ section img {
   background-position: center;
   padding: 60px 0;
   color: #000;
+}
+#servicos h2 {
+  font-size: 50px; /* você pode aumentar esse valor se quiser ainda maior */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #000; /* ou qualquer cor que combine com o design */
 }
 
 /* Carrossel com rolagem horizontal */
