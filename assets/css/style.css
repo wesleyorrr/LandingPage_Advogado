@@ -1,9 +1,11 @@
+/* Reset básico para remover margens e paddings padrão */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilo geral do corpo */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -11,19 +13,65 @@ body {
   overflow-x: hidden;
 }
 
+/* Estilo do cabeçalho principal */
 header {
   position: relative;
   height: 100vh;
- background: url('../img/imgid.png') no-repeat center center/cover;
+  overflow: hidden;
+  background: url('../img/imgid.png') no-repeat center center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: #e0b063;
   text-align: center;
   padding: 2rem;
 }
 
+.header-content {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 4rem;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.header-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.header-content button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  background: #791c1c;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  animation: pulse 2.5s infinite ease-in-out;
+  transition: transform 0.3s;
+}
+
+.header-content button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Navegação */
 nav {
   width: 100%;
   position: absolute;
@@ -32,14 +80,20 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 20px 50px;
   background: rgba(0, 0, 0, 0.4);
   z-index: 10;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
 }
 
 .nav-links {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .nav-links a {
@@ -53,54 +107,14 @@ nav {
   color: #791c1c;
 }
 
-.logo {
-  width: 50px;
-  height: 50px;
-}
-
-.header-content {
-  margin-top: auto;
-  margin-bottom: 4rem;
-  max-width: 1000px;
-}
-
-.header-content h1 {
-  font-size: 3.2rem;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
-}
-
-.header-content h2 {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  font-weight: 400;
-}
-
-.header-content button {
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  border: none;
-  background: #791c1c;
-  color: white;
-  font-family: poppins, sans-serif;
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #e0b063;
   cursor: pointer;
-  border-radius: 8px;
-  animation: pulse 2.5s infinite ease-in-out;
-  transition: transform 0.3s;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
+/* Seções */
 section {
   padding: 4rem 2rem;
 }
@@ -110,45 +124,20 @@ section img {
   height: auto;
 }
 
-.social-links {
-  display: flex;
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
-.social-links a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.social-links a:hover {
-  color: #0077b5;
-}
-
-.servicos-bg {
-  background-image: url("../img/bg-servicos.jpg"); /* troque pelo nome da sua imagem de fundo */
-  background-size: cover;
-  background-position: center;
-  padding: 60px 0;
-  color: #000;
-}
+/* Serviços */
 #servicos h2 {
-  font-size: 50px; /* você pode aumentar esse valor se quiser ainda maior */
+  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
-  color: #000; /* ou qualquer cor que combine com o design */
+  color: #000;
 }
 
-/* Carrossel com rolagem horizontal */
 .carousel {
   display: flex;
   overflow-x: auto;
   gap: 20px;
   padding: 20px;
-  background-image: url('../img/fundo.jpg'); /* coloque a imagem que quiser */
   background-size: cover;
   background-position: center;
   border-radius: 15px;
@@ -170,8 +159,8 @@ section img {
 }
 
 .carousel-item {
-  min-width: 300px;
-  max-width: 300px;
+  min-width: 350px;
+  max-width: 350px;
   background: #fff;
   border-radius: 15px;
   padding: 15px;
@@ -186,7 +175,7 @@ section img {
 
 .carousel-item img {
   width: 100%;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -196,18 +185,55 @@ section img {
 .carousel-item:hover img {
   transform: scale(1.05);
 }
-.depoimentos {
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+
+/* Depoimentos */
+#depoimentos {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
 }
 
-.depoimento {
-  background: #f9f9f9;
-  padding: 1rem;
-  border-left: 4px solid #ffd700;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+#depoimentos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.depoimentos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.card-depoimento {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card-depoimento:hover {
+  transform: translateY(-8px);
+}
+
+.card-depoimento img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #0077cc;
+}
+
+/* Contato */
+#contato h2 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 form {
@@ -218,7 +244,8 @@ form {
   gap: 1rem;
 }
 
-form input, form textarea {
+form input, 
+form textarea {
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -226,30 +253,124 @@ form input, form textarea {
 }
 
 form button {
-  padding: 0.75rem;
-  background: #ffd700;
+  padding: 0.8rem 2rem;
+  background: #791c1c;
+  color: white;
   border: none;
   font-size: 1rem;
+  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 form button:hover {
-  background: #e6c200;
+  background: black;
 }
 
+/* Rodapé */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.footer-column h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #e0b063;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.footer-column a {
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: #e0b063;
+}
+
+.mapa iframe {
+  border-radius: 8px;
+  width: 100%;
+  height: 180px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #444;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .header-content h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
-
-  .carousel {
+  
+  .header-content h2 {
+    font-size: 1.2rem;
+  }
+  
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    display: none;
     flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .nav-links a {
+    padding: 1rem 0;
+    border-top: 1px solid #444;
+  }
+  
+  .carousel-item {
+    min-width: 280px;
+  }
+  
+  #servicos h2,
+  #depoimentos h2,
+  #contato h2 {
+    font-size: 2rem;
   }
 }

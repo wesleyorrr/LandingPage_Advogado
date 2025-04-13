@@ -14,3 +14,7 @@ function scrollToContato() {
     const whatsappUrl = `https://wa.me/55SEUNUMEROAQUI?text=${encodeURIComponent(texto)}`;
     window.open(whatsappUrl, '_blank');
   });
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('show');
+  }
