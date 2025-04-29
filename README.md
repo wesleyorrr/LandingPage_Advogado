@@ -27,7 +27,7 @@ Desenvolvida com **HTML, CSS e JavaScript**, a página é responsiva e objetiva 
 
 ## 📷 Demonstração
 
-[*(Click aqui e veja nosso trabalho )*](https://wesleyorrr.github.io/LandingPage_Advogado/)
+[Click aqui e veja nosso trabalho](https://wesleyorrr.github.io/LandingPage_Advogado/)
 
 ---
 
